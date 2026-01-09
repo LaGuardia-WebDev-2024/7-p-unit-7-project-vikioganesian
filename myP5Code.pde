@@ -4,6 +4,14 @@ void setup() {
 }
 
 //🎯Variable Declarations Go Here
+var wheelSize = 10
+var leftwheelX = 560
+var rightwheelX = 485
+var wheelY = 310
+var boardX = 522
+var boardY = 299
+var boardL = 15
+var boardW = 90
 
 
 //🟢Draw Procedure - Runs on Repeat
@@ -11,9 +19,12 @@ draw = function(){
  
   background(255,255,255,0);
   
-
-
-
+//Skateboard
+fill(0,0,0)
+ellipse (leftwheelX,wheelY,wheelSize, wheelSize);
+ellipse (rightwheelX,wheelY,wheelSize,wheelSize);
+fill(255, 0, 115)
+ellipse (boardX,boardY,boardW,boardL);
 
 
 

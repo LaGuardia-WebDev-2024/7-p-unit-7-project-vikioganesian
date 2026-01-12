@@ -12,6 +12,10 @@ var boardX = 522
 var boardY = 299
 var boardL = 15
 var boardW = 90
+var torsoX = 505
+var torsoY = 200
+var torsoW = 30
+var torsoL = 50;
 
 
 //🟢Draw Procedure - Runs on Repeat
@@ -26,6 +30,11 @@ ellipse (rightwheelX,wheelY,wheelSize,wheelSize);
 fill(255, 0, 115)
 ellipse (boardX,boardY,boardW,boardL);
 
+//human
+fill (0,0,0)
+rect(torsoX,torsoY,torsoW,torsoL);
+textSize (40)
+text ('👨🏻‍🦱',500,180);
 
 
   if(mousePressed){showXYPositions();}

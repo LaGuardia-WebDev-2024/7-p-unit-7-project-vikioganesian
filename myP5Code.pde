@@ -26,8 +26,8 @@ var legLXD = 505
 var legLRYU = 245
 var legRX = 527
 var legRXD = 540
-var legLRYD = 295;
-
+var legLRYD = 295
+var headX = 495;
 
 //🟢Draw Procedure - Runs on Repeat
 draw = function(){
@@ -46,17 +46,35 @@ ellipse (boardX,boardY,boardW,boardL);
 //human
 
 strokeWeight(13);
-line (legLXU,legLRYU,505,295);
-line (527,245,540,295);
+line (legLXU,legLRYU,legLXD,legLRYD);
+line (legRX,legLRYU,legRXD,legLRYD);
 
+strokeWeight(13);
+line (legLXU - 10,legLRYU - 40,legLXD -20,legLRYD -50);
+line (legRX + 10,legLRYU - 40,legRXD + 20,legLRYD -50);
 
 strokeWeight (1);
 fill (110, 104, 83)
 rect(torsoX,torsoY,torsoW,torsoL);
 
-textSize (44)
-text ('👨🏻‍🦱',495,196);
 
+textSize (44)
+text ('👨🏻‍🦱',headX,196);
+
+
+
+
+//animating
+
+leftwheelX = leftwheelX -2
+rightwheelX = rightwheelX -2
+boardX = boardX -2
+torsoX = torsoX -2
+legLXU = legLXU - 2
+legLXD = legLXD -2
+legRX = legRX -2
+legRXD = legRXD -2
+headX = headX -2
 
 
 

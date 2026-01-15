@@ -6,6 +6,7 @@ Let angle = 0;
 void setup() {
     size(600, 400); 
    
+   colorMode(HSB);
 }
 
 //🎯Variable Declarations Go Here
@@ -40,10 +41,10 @@ strokeWeight (1);
 fill(0,0,0)
 ellipse (leftwheelX,wheelY,wheelSize, wheelSize);
 ellipse (rightwheelX,wheelY,wheelSize,wheelSize);
-fill(255, 0, 115)
+fill(boardX / 3, 90, 200)
 ellipse (boardX,boardY,boardW,boardL);
 
-//human
+//body
 
 strokeWeight(13);
 line (legLXU,legLRYU,legLXD,legLRYD);
@@ -54,10 +55,11 @@ line (legLXU - 10,legLRYU - 40,legLXD -20,legLRYD -50);
 line (legRX + 10,legLRYU - 40,legRXD + 20,legLRYD -50);
 
 strokeWeight (1);
-fill (110, 104, 83)
+fill (204, 160, 94)
 rect(torsoX,torsoY,torsoW,torsoL);
 
 
+//head 
 textSize (44)
 text ('👨🏻‍🦱',headX,196);
 
@@ -66,15 +68,34 @@ text ('👨🏻‍🦱',headX,196);
 
 //animating
 
-leftwheelX = leftwheelX -2
-rightwheelX = rightwheelX -2
-boardX = boardX -2
-torsoX = torsoX -2
-legLXU = legLXU - 2
-legLXD = legLXD -2
-legRX = legRX -2
-legRXD = legRXD -2
-headX = headX -2
+leftwheelX = leftwheelX -3
+rightwheelX = rightwheelX -3
+boardX = boardX -3
+torsoX = torsoX -3
+legLXU = legLXU - 3
+legLXD = legLXD -3
+legRX = legRX -3
+legRXD = legRXD -3
+headX = headX -3
+
+
+
+
+if(leftwheelX < 0) {
+  leftwheelX = 560
+  rightwheelX = 485
+  boardX = 522
+  torsoX = 505
+  legLXU = 515
+legLXD = 505
+legLRYU = 245
+legRX = 527
+legRXD = 540
+headX = 495;
+
+
+}
+
 
 
 
